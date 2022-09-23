@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Bangers&display=swap');
+
+:root {
+  --bg-background: #FAFCE0;
+  --purple: #4A314D;
+  --purple-disabled: #6B6570;
+  --dark-purple: #1A090D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-background);
+}
+
+p {
+  font-family: 'ABeeZee', sans-serif;
+  margin-bottom: .750rem;
+}
+
+h1, h2, h3, a, nav p {
+  font-family: 'Bangers', cursive;
+  color: var(--purple);
+  letter-spacing: 3px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  width: 70vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: 2.25rem;
+  padding: 2.25rem 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex
+}
+
+li {
+  margin-right: 1rem;
+  font-size: 24px
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  transition: text-shadow .2s ease-in-out;
+}
+
+a:hover {
+  text-shadow: 0 0 2px var(--purple);
+}
+
+hr {
+  width: 60vw;
+  margin: 2.5rem auto;
+  height: 2px;
+  border: none;
+  background-color: var(--purple-disabled);
+}
+
+main {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 2rem 0;
+  border-top: 2px solid var(--purple);
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.disabled {
+  color: var(--purple-disabled)
+}
+
+.perfil {
+  display: flex;
+  background-color: #C6D55C;
+  padding: 20px;
+  border-radius: 16px;
+  align-items: center;
+}
+
+.foto {
+  width: 250px;
+  aspect-ratio: 1;
+}
+
+.video {
+  width: 65vw;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.contato {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.endereco {
+  font-family: 'ABeeZee', sans-serif;
+  color: var(--dark-purple);
+  font-size: 1.250rem;
+}
+
+.mapa {
+  width: 35vw;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  box-shadow: 8px 8px 16px #4A314D88;
+}
+
+.formulario {
+  width: 100%;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.250rem;
+}
+
+input, textarea {
+  border: 1px solid var(--dark-purple)
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer
+}
+
+button:hover {
+  background-color: var(--dark-purple);
+  color: #fff
+}
