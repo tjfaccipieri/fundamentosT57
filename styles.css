@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bangers', cursive;
+}
+
+ul {
+  list-style: none;
+  display: flex
+}
+
+li {
+  margin-right: 1rem;
+  font-size: 24px
+}
+
+a {
+  text-decoration: none;
+}
+
+.perfil {
+  display: flex;
+  width: 70vw;
+  margin: 0 auto;
+  background-color: #C6D55C;
+  padding: 20px;
+  border-radius: 16px;
+  
+}
+
+.foto {
+  width: 250px;
+  height: 250px
+}
+
+//unidades de medida do css
+px -> unidade absoluta
+% -> unidade relativa
+viewUnits -> vw / vh -> unidade relativa (vai de 0 a 100)
+rem -> do tamanho da letra M maiuscula do navegador do usuario
