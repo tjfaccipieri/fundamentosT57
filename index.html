@@ -14,13 +14,14 @@
     <nav>
       <p>Zombieland</p>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="./index.html" >Home</a></li>
         <li><a href="./contato.html" class="disabled">Contato</a></li>
+        <li><a href="./origem.html" class="disabled">Origem</a></li>
       </ul>
     </nav>
     <main>
       <section>
-        <h1 onclick="aparecerNome()">Hello Zombies</h1>
+        <h1 id="titulo"></h1>
         
         <hr />
         <div class="perfil">
@@ -52,8 +53,6 @@
                 zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv
                 ingdead.
               </p>
-            </div>
-            <div>
               <p>
                 Zombie ipsum reversus ab viral inferno, nam rick grimes malum
                 cerebro. De carne lumbering animata corpora quaeritis. Summus
@@ -91,6 +90,16 @@
     </footer>
 
 
-    <script src="./assets/scripts/script.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new TypeIt("#titulo", {
+          strings: ["Hello Zombies"],
+          loop: true,
+          speed: 200,
+          loopDelay: 3000
+        }).go();
+      });
+    </script>
   </body>
 </html>

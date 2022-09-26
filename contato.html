@@ -12,7 +12,8 @@
     <p>Zombieland</p>
     <ul>
       <li><a href="./index.html" class="disabled">Home</a></li>
-      <li><a href="#">Contato</a></li>
+      <li><a href="./contato.html" >Contato</a></li>
+      <li><a href="./origem.html" class="disabled">Origem</a></li>
     </ul>
   </nav>
 
@@ -22,22 +23,25 @@
     <section class="formulario">
       <h3>Contato</h2>
       <form>
-        <div>
+        <div class="campos-form">
           <label for="nome">Nome:</label>
-          <input type="text" placeholder="Insira o seu nome completo">
+          <input id="nome" name="nome" type="text" placeholder="Insira o seu nome completo" onkeyup="validaNome()" required>
+          <div id="txtNome"></div>
         </div>
         
-        <div>
+        <div class="campos-form">
           <label for="email">E-mail:</label>
-          <input type="text" placeholder="Insira o seu e-mail">
+          <input id="email" name="email" type="text" placeholder="Insira o seu e-mail" onkeyup="validaEmail2()" required>
+          <div id="txtEmail"></div>
         </div>
         
-        <div>
+        <div class="campos-form">
           <label for="mensagem">Mensagem:</label>
-          <textarea rows="8" cols="45" placeholder="Deixe sua mensagem para nossos zumbis"></textarea>
+          <textarea id="mensagem" name="mensagem" rows="8" placeholder="Deixe sua mensagem para nossos zumbis" onkeyup="validaMensagem()"></textarea>
+          <div id="txtMsg"></div>
         </div>
         
-        <button type="submit">Enviar</button>
+        <button type="submit" onclick="enviarForm()">Enviar</button>
       </form>
     </section>
     
@@ -49,12 +53,14 @@
         <span>Terra - Sistema Solar - Via Láctea</p>
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39735.200853326256!2d-115.49441563337662!3d51.504958766469095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53772697e19e324d%3A0x2545af1e5c14084!2sZombie%20Peak!5e0!3m2!1spt-BR!2sbr!4v1663867049839!5m2!1spt-BR!2sbr" class="mapa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39735.200853326256!2d-115.49441563337662!3d51.504958766469095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53772697e19e324d%3A0x2545af1e5c14084!2sZombie%20Peak!5e0!3m2!1spt-BR!2sbr!4v1663867049839!5m2!1spt-BR!2sbr" class="mapa" id="mapa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmouseover="mapaZoom()" onmouseout="mapaNormal()"></iframe>
     </section>
   </main>
 
   <footer>
     <p>Feito com amor e carinho por: Thiago Faccipieri - 2022 &copy;</p>
   </footer>
+
+  <script src="./assets/scripts/script.js"></script>
 </body>
 </html>

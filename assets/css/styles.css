@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Bangers&display=swap');
 
 :root {
-  --bg-background: #FAFCE0;
-  --purple: #4A314D;
-  --purple-disabled: #6B6570;
-  --dark-purple: #1A090D;
+  --bg-background: #fafce0;
+  --purple: #4a314d;
+  --purple-disabled: #6b6570;
+  --dark-purple: #1a090d;
 }
 
 * {
@@ -19,21 +19,27 @@ body {
 
 p {
   font-family: 'ABeeZee', sans-serif;
-  margin-bottom: .750rem;
+  margin-bottom: 0.75rem;
 }
 
-h1, h2, h3, a, nav p {
+h1,
+h2,
+h3,
+a,
+nav p {
   font-family: 'Bangers', cursive;
   color: var(--purple);
   letter-spacing: 3px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
 h1 {
-  font-size: 4rem
+  font-size: 4rem;
 }
 
 h2 {
@@ -56,18 +62,18 @@ nav {
 
 ul {
   list-style: none;
-  display: flex
+  display: flex;
 }
 
 li {
   margin-right: 1rem;
-  font-size: 24px
+  font-size: 24px;
 }
 
 a {
   text-decoration: none;
   font-size: 2rem;
-  transition: text-shadow .2s ease-in-out;
+  transition: text-shadow 0.2s ease-in-out;
 }
 
 a:hover {
@@ -96,12 +102,12 @@ footer {
 }
 
 .disabled {
-  color: var(--purple-disabled)
+  color: var(--purple-disabled);
 }
 
 .perfil {
   display: flex;
-  background-color: #C6D55C;
+  background-color: #c6d55c;
   padding: 20px;
   border-radius: 16px;
   align-items: center;
@@ -130,7 +136,7 @@ footer {
 .endereco {
   font-family: 'ABeeZee', sans-serif;
   color: var(--dark-purple);
-  font-size: 1.250rem;
+  font-size: 1.25rem;
 }
 
 .mapa {
@@ -144,33 +150,158 @@ footer {
   width: 100%;
 }
 
-input, textarea, button {
-  width: 100%;
-  margin-top: 1rem;
-  padding: .5rem 1rem;
-  border-radius: 8px;
-  font-size: 1.250rem;
-  color: var(--dark-purple)
-}
-input::placeholder, textarea::placeholder {
-  color:#C6D55C
+label {
+  font-family: 'ABeeZee', sans-serif;
+  margin-left: 1rem;
 }
 
-input, textarea {
-  border: 1px solid var(--dark-purple)
+input,
+textarea,
+button {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  color: var(--dark-purple);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c6d55c;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+input,
+textarea {
+  border: 1px solid var(--dark-purple);
 }
 
 button {
   background-color: transparent;
-  cursor: pointer
+  cursor: pointer;
 }
 
 button:hover {
   background-color: var(--dark-purple);
-  color: #fff
+  color: #fff;
+}
+
+.campos-form {
+  margin-bottom: 1rem;
 }
 
 .separacao {
   display: flex;
   align-items: center;
 }
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 250px;
+}
+
+.fotos img {
+  aspect-ratio: 1;
+  border: 2px solid var(--dark-purple);
+  border-radius: 8px;
+}
+
+.lista {
+  list-style: upper-roman;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.lista li {
+  font-size: 1.25rem;
+  transition: 0.3s ease-in-out;
+}
+
+.lista li:hover {
+  font-size: 1.75rem;
+}
+
+
+
+
+
+
+/*! estilização de efeitos  */
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes rubberBand {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  30% {
+  -webkit-transform: scale3d(1.25, 0.75, 1);
+  transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+  -webkit-transform: scale3d(0.75, 1.25, 1);
+  transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.15, 0.85, 1);
+  transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+  -webkit-transform: scale3d(.95, 1.05, 1);
+  transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+  -webkit-transform: scale3d(1.05, .95, 1);
+  transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes rubberBand {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  30% {
+  -webkit-transform: scale3d(1.25, 0.75, 1);
+  transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+  -webkit-transform: scale3d(0.75, 1.25, 1);
+  transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.15, 0.85, 1);
+  transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+  -webkit-transform: scale3d(.95, 1.05, 1);
+  transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+  -webkit-transform: scale3d(1.05, .95, 1);
+  transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  } 
