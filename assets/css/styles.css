@@ -137,7 +137,7 @@ footer {
   width: 35vw;
   aspect-ratio: 16/9;
   border-radius: 8px;
-  box-shadow: 8px 8px 16px #4A314D88;
+  box-shadow: 8px 8px 16px #4b324e88;
 }
 
 .formulario {
@@ -147,9 +147,13 @@ footer {
 input, textarea, button {
   width: 100%;
   margin-top: 1rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
   border-radius: 8px;
   font-size: 1.250rem;
+  color: var(--dark-purple)
+}
+input::placeholder, textarea::placeholder {
+  color:#C6D55C
 }
 
 input, textarea {
@@ -164,4 +168,9 @@ button {
 button:hover {
   background-color: var(--dark-purple);
   color: #fff
+}
+
+.separacao {
+  display: flex;
+  align-items: center;
 }
